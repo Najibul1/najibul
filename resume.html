@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- daisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = "none"; // Hide all sections
+            });
+
+            // Show the selected section
+            document.getElementById(tabName).style.display = "block"; // Only show the active tab
+
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('tab-active');
+            });
+
+            // Add active class to clicked tab
+            document.querySelector(`[data-tab="${tabName}"]`).classList.add('tab-active');
+        }
+    </script>
+</head>
+
+<body onload="showTab('education')">
+
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-gray-900" href="index.html">ABOUT ME</a>
+                <a class="mr-5 hover:text-gray-900" href="resume.html">RESUME</a>
+                <a class="mr-5 hover:text-gray-900" href="project.html">PROJECT</a>
+                <a class="mr-5 hover:text-gray-900" href="contact.html">CONTACT</a>
+
+
+                <div class="flex-none">
+                    <ul class="menu menu-horizontal px-1">
+                        <li>
+                            <details>
+                                <summary>THEME</summary>
+                                <ul tabindex="0"
+                                    class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl">
+                                    <li>
+                                        <input type="radio" name="theme-dropdown"
+                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                            aria-label="Default" value="default" />
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="theme-dropdown"
+                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                            aria-label="Retro" value="retro" />
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="theme-dropdown"
+                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                            aria-label="Valentine" value="valentine" />
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="theme-dropdown"
+                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                            aria-label="Aqua" value="aqua" />
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+
+    <div role="tablist" class="tabs tabs-boxed">
+        <a role="tab" class="tab" data-tab="experience" onclick="showTab('experience')">EXPERIENCE</a>
+        <a role="tab" class="tab tab-active" data-tab="education" onclick="showTab('education')">EDUCATION</a>
+        <a role="tab" class="tab" data-tab="skills" onclick="showTab('skills')">SKILLS</a>
+    </div>
+
+    <!-- EXPERIENCE Section -->
+    <div id="experience" class="content-section marginclass" style="display: none;">
+        <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+            <li>
+                <div class="timeline-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="timeline-start mb-10 md:text-end">
+                    <time class="font-mono italic">Jan 2025 - Present</time>
+                    <div class="text-lg font-black">Video Editor</div>
+                    <div class="text-sm font-black">Internet Spark</div>
+                    Strong understanding of <br> 
+                    storytelling, pacing, and transitions <br> 
+                    for engaging video content.
+                </div>
+                <hr />
+            </li>
+            <li>
+                <hr />
+                <div class="timeline-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="timeline-end md:mb-10">
+                    <time class="font-mono italic">Jul 2024 - Dec 2024</time>
+                    <div class="text-lg font-black">iOS Developer</div>
+                    <div class="text-sm font-black">Xceltec Interactive Pvt Ltd.</div>
+                    Specializing in UIKit framework. <br>
+                    My work focuses on intuitive user interfaces and efficient, <br>
+                    well-structured mobile app solutions.
+                </div>
+                <hr />
+            </li>
+        </ul>
+    </div>
+
+    <!-- EDUCATION Section -->
+    <div id="education" class="content-section marginclass" style="display: block;">
+        <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+            <li>
+                <div class="timeline-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="timeline-start mb-10 md:text-end">
+                    <time class="font-mono italic">2021 - 2024</time>
+                    <div class="text-lg font-black">BACHELOR'S in COMPUTER APPLICATION</div>
+                    <div class="text-sm font-black">GUJARAT UNIVERSITY</div>
+                    During this timeline, <br> 
+                    I developed strong interest in video editing and content creation, <br>
+                    sparking my creative journey.  <br>
+                    <b>MARKS: CGPA - 8.1</b>
+                </div>
+                <hr />
+            </li>
+            <li>
+                <hr />
+                <div class="timeline-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="timeline-end md:mb-10">
+                    <time class="font-mono italic">2020 - 2021</time>
+                    <div class="text-lg font-black">HIGHER SECONDARY CERTIFICATE</div>
+                    <div class="text-sm font-black">GSHSEB GANDHINAGAR</div>
+                    I was an external student, So GSHSEB had conducted my exam. <br>
+                    <b>MARKS: 60%</b>
+                </div>
+                <hr />
+            </li>
+        </ul>
+    </div>
+
+    <!-- SKILLS Section -->
+    <div id="skills" class="content-section marginclass" style="display: none;">
+        <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+            <li>
+                <div class="timeline-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="timeline-start mb-10 md:text-end">
+                    <div class="text-lg font-black">Audio Editing</div>
+                    Enhancing sound quality with seamless mixing, <br> noise reduction, and perfectly synced audio for a cinematic experience.
+                </div>
+                <hr />
+            </li>
+            <li>
+                <hr />
+                <div class="timeline-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="timeline-end md:mb-10">
+                    <div class="text-lg font-black">Color Correction & Grading</div>
+                    Bringing visuals to life with <br> balanced colors, mood-enhancing tones, and professional-grade grading techniques.
+                </div>
+                <hr />
+            </li>
+            <li>
+                <hr />
+                <div class="timeline-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="timeline-start mb-10 md:text-end">
+                    <div class="text-lg font-black">Transitions & Effects</div>
+                    Creating smooth, dynamic transitions and <br> engaging effects that keep viewers hooked from start to finish.
+                </div>
+                <hr />
+            </li>
+            <li>
+                <hr />
+                <div class="timeline-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="timeline-end md:mb-10">
+                    <div class="text-lg font-black">Storytelling</div>
+                    Crafting compelling narratives through <br> well-paced editing, ensuring every frame adds meaning to the story.
+                </div>
+                <hr />
+            </li>
+            <li>
+                <hr />
+                <div class="timeline-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="timeline-start mb-10 md:text-end">
+                    <div class="text-lg font-black">Creativity</div>
+                    Bringing unique and innovative ideas <br> to every project, making videos visually appealing and impactful.
+                </div>
+                <hr />
+            </li>
+            <li>
+                <hr />
+                <div class="timeline-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="timeline-end md:mb-10">
+                    <div class="text-lg font-black">Keyframing</div>
+                    Animating motion, text, and effects with precision <br> for smooth, professional, and engaging video sequences.
+                </div>
+                <hr />
+            </li>
+
+             <!--<li>
+                <hr />
+                <div class="timeline-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="timeline-end md:mb-10">
+                    <div class="text-lg font-black">Editing Software Proficiency</div>
+                    Master industry-standard software like Adobe Premiere Pro, Final Cut Pro, or DaVinci Resolve
+                </div>
+                <hr />
+            </li>-->
+
+        </ul>
+    </div>    
+</body>
+</html>

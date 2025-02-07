@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- daisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-gray-900" href="index.html">ABOUT ME</a>
+                <a class="mr-5 hover:text-gray-900" href="resume.html">RESUME</a>
+                <a class="mr-5 hover:text-gray-900" href="project.html">PROJECT</a>
+                <a class="mr-5 hover:text-gray-900" href="contact.html">CONTACT</a>
+
+
+                <div class="flex-none">
+                    <ul class="menu menu-horizontal px-1">
+                        <li>
+                            <details>
+                                <summary>THEME</summary>
+                                <ul tabindex="0"
+                                    class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl">
+                                    <li>
+                                        <input type="radio" name="theme-dropdown"
+                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                            aria-label="Default" value="default" />
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="theme-dropdown"
+                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                            aria-label="Retro" value="retro" />
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="theme-dropdown"
+                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                            aria-label="Valentine" value="valentine" />
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="theme-dropdown"
+                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                            aria-label="Aqua" value="aqua" />
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+</body>
+
+</html>
