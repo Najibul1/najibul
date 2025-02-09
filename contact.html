@@ -76,7 +76,7 @@
                       <div class="p-2 w-1/2">
                           <div class="relative">
                               <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
-                              <input type="text" id="name" name="name" placeholder="Hellloo Peter 🕷"
+                              <input type="text" id="name" name="name" placeholder="John Doe "
                                   class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                               <p class="text-red-500 text-xs mt-1 hidden" id="nameError">Name is required.</p>
                           </div>
@@ -200,6 +200,27 @@
   
           return isValid;
       }
+  </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Apply the saved theme from localStorage
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        document.querySelector(`input[value="${savedTheme}"]`).checked = true;
+      }
+
+      // Handle theme change
+      document.querySelectorAll('.theme-controller').forEach(radio => {
+        radio.addEventListener('change', function () {
+          const selectedTheme = this.value;
+          document.documentElement.setAttribute('data-theme', selectedTheme);
+          localStorage.setItem('theme', selectedTheme);
+          document.getElementById('theme-details').removeAttribute('open');
+        });
+      });
+    });
   </script>
 </body>
 </html>
