@@ -2,65 +2,220 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- daisyUI CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- daisyUI CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Portfolio</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
 
-    <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                <a class="mr-5 hover:text-gray-900" href="index.html">ABOUT ME</a>
-                <a class="mr-5 hover:text-gray-900" href="resume.html">RESUME</a>
-                <a class="mr-5 hover:text-gray-900" href="project.html">PROJECT</a>
-                <a class="mr-5 hover:text-gray-900" href="contact.html">CONTACT</a>
-
-
-                <div class="flex-none">
-                    <ul class="menu menu-horizontal px-1">
-                        <li>
-                            <details>
-                                <summary>THEME</summary>
-                                <ul tabindex="0"
-                                    class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl">
-                                    <li>
-                                        <input type="radio" name="theme-dropdown"
-                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                            aria-label="Default" value="default" />
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="theme-dropdown"
-                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                            aria-label="Retro" value="retro" />
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="theme-dropdown"
-                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                            aria-label="Valentine" value="valentine" />
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="theme-dropdown"
-                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                            aria-label="Aqua" value="aqua" />
-                                    </li>
-                                </ul>
-                            </details>
-                        </li>
-                    </ul>
-                </div>
-
-            </nav>
+  <!-- Navigation Bar -->
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900" href="index.html">ABOUT ME</a>
+        <a class="mr-5 hover:text-gray-900" href="resume.html">RESUME</a>
+        <a class="mr-5 hover:text-gray-900" href="project.html">PROJECT</a>
+        <a class="mr-5 hover:text-gray-900" href="contact.html">CONTACT</a>
+        <div class="flex-none">
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <details id="theme-details">
+                <summary>THEME</summary>
+                <ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl">
+                  <li>
+                    <input type="radio" name="theme-dropdown"
+                      class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Default"
+                      value="default" />
+                  </li>
+                  <li>
+                    <input type="radio" name="theme-dropdown"
+                      class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Retro"
+                      value="retro" />
+                  </li>
+                  <li>
+                    <input type="radio" name="theme-dropdown"
+                      class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Valentine"
+                      value="valentine" />
+                  </li>
+                </ul>
+              </details>
+            </li>
+          </ul>
         </div>
-    </header>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 9:16 vertical video -->
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap w-full mb-20">
+        <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">MY WORK FOR CLIENTS</h1>
+          <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+        </div>
+        <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+          Bringing client visions to life with creativity, precision, and impactful storytelling.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap -m-4 justify-center">
+        <!-- Video Block -->
+        <div class="xl:w-1/4 md:w-1/2 sm:w-full p-4">
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <div class="video-container">
+              <iframe src="https://drive.google.com/file/d/1-o_xL_Ho6WOG0iXyQ74RQ4EQU5nZwh39/preview" allow="autoplay"
+                allowfullscreen></iframe>
+            </div>
+            <h2 class="text-lg text-gray-900 font-medium title-font mt-4 text-center">REAL ESTATE MOTION AD</h2>
+          </div>
+        </div>
+
+        <div class="xl:w-1/4 md:w-1/2 sm:w-full p-4">
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <div class="video-container">
+              <iframe src="https://drive.google.com/file/d/1uttkmVLQOJdqH-Oxjo8Gu3-64LTNO-XV/preview" allow="autoplay"
+                allowfullscreen></iframe>
+            </div>
+            <h2 class="text-lg text-gray-900 font-medium title-font mt-4 text-center">FESTIVE PACK AD</h2>
+          </div>
+        </div>
+
+        <div class="xl:w-1/4 md:w-1/2 sm:w-full p-4">
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <div class="video-container">
+              <iframe src="https://drive.google.com/file/d/1vhGggIiueQ36Z7XJSTU97ZN_cLPW6sou/preview" allow="autoplay"
+                allowfullscreen></iframe>
+            </div>
+            <h2 class="text-lg text-gray-900 font-medium title-font mt-4 text-center">REAL ESTATE META AD</h2>
+          </div>
+        </div>
+
+        <div class="xl:w-1/4 md:w-1/2 sm:w-full p-4">
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <div class="video-container">
+              <iframe src="https://drive.google.com/file/d/166-7a2RelIiiqGXKsDwkP0pSSuLs7Cks/preview" allow="autoplay"
+                allowfullscreen></iframe>
+            </div>
+            <h2 class="text-lg text-gray-900 font-medium title-font mt-4 text-center">COLDPLAY REEL EDIT</h2>
+          </div>
+        </div>
+
+        <div class="xl:w-1/4 md:w-1/2 sm:w-full p-4">
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <div class="video-container">
+              <iframe src="https://drive.google.com/file/d/1QSdZba1qpyZUCNNAOhoIsiguREEXpXig/preview" allow="autoplay"
+                allowfullscreen></iframe>
+            </div>
+            <h2 class="text-lg text-gray-900 font-medium title-font mt-4 text-center">TRAVEL & TOUR AD</h2>
+          </div>
+        </div>
+
+        <div class="xl:w-1/4 md:w-1/2 sm:w-full p-4">
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <div class="video-container">
+              <iframe src="https://drive.google.com/file/d/17_hs-MKp9e70adeqm_d-Xg_E69BbmkmO/preview" allow="autoplay"
+                allowfullscreen></iframe>
+            </div>
+            <h2 class="text-lg text-gray-900 font-medium title-font mt-4 text-center">INTERIOR DESIGN AD</h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 16:9 horizontal video -->
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap w-full mb-20">
+        <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">MY OLD VIDEO EDITS</h1>
+          <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+        </div>
+        <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+          A glimpse into my past edits—where creativity, precision, and storytelling come together to craft engaging
+          visuals.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap -m-4 justify-center">
+
+        <div class="xl:w-1/2 md:w-1/2 sm:w-full p-4">
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <div class="video-container-yt">
+              <iframe class="w-full aspect-video"
+                src="https://drive.google.com/file/d/1atwgZ6qspnUCba2Rar10UEiYeYMPV7aW/preview" allow="autoplay"
+                allowfullscreen></iframe>
+            </div>
+            <h2 class="text-lg text-gray-900 font-medium title-font mt-4 text-center">
+              PROGRAMMING HISTORY - EXPLANATION VIDEO
+            </h2>
+          </div>
+        </div>
+
+        <div class="xl:w-1/2 md:w-1/2 sm:w-full p-4">
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <div class="video-container-yt">
+              <iframe class="w-full aspect-video"
+                src="https://drive.google.com/file/d/1lIwJsIm9SZyHj-Y5bfLxKfBjH_7Y8YR7/preview" allow="autoplay"
+                allowfullscreen></iframe>
+            </div>
+            <h2 class="text-lg text-gray-900 font-medium title-font mt-4 text-center">
+              FACTS ABOUT EAGLE - EXPLANATION VIDEO
+            </h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="diff aspect-[16/9]">
+        <div class="diff-item-1">
+            <video controls width="560">
+                <source src="https://drive.google.com/uc?export=download&id=1letcjRqZyv5u9cEPUtd8Pa17Tn7eFqDL" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="diff-item-2">
+            <video controls width="560">
+                <source src="https://drive.google.com/uc?export=download&id=1letcjRqZyv5u9cEPUtd8Pa17Tn7eFqDL" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="diff-resizer"></div>
+      </div> -->
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Apply the saved theme from localStorage
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        document.querySelector(`input[value="${savedTheme}"]`).checked = true;
+      }
+
+      // Handle theme change
+      document.querySelectorAll('.theme-controller').forEach(radio => {
+        radio.addEventListener('change', function () {
+          const selectedTheme = this.value;
+          document.documentElement.setAttribute('data-theme', selectedTheme);
+          localStorage.setItem('theme', selectedTheme);
+          document.getElementById('theme-details').removeAttribute('open');
+        });
+      });
+    });
+  </script>
 
 </body>
 
