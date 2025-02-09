@@ -13,6 +13,13 @@
     <title>Portfolio</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
+    <style>
+        body {
+            overflow-y: scroll;
+            /* Always show vertical scrollbar */
+        }
+    </style>
+
     <script>
         function showTab(tabName) {
             // Hide all sections
@@ -35,7 +42,7 @@
 </head>
 
 <body onload="showTab('education')">
-
+<!-- Navigation Bar -->
     <header class="text-gray-600 body-font">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
             <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
@@ -43,12 +50,10 @@
                 <a class="mr-5 hover:text-gray-900" href="resume.html">RESUME</a>
                 <a class="mr-5 hover:text-gray-900" href="project.html">PROJECT</a>
                 <a class="mr-5 hover:text-gray-900" href="contact.html">CONTACT</a>
-
-
                 <div class="flex-none">
                     <ul class="menu menu-horizontal px-1">
                         <li>
-                            <details>
+                            <details id="theme-details">
                                 <summary>THEME</summary>
                                 <ul tabindex="0"
                                     class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl">
@@ -67,31 +72,26 @@
                                             class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
                                             aria-label="Valentine" value="valentine" />
                                     </li>
-                                    <li>
-                                        <input type="radio" name="theme-dropdown"
-                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                            aria-label="Aqua" value="aqua" />
-                                    </li>
                                 </ul>
                             </details>
                         </li>
                     </ul>
                 </div>
-
             </nav>
         </div>
     </header>
 
-
-
-    <div role="tablist" class="tabs tabs-boxed">
-        <a role="tab" class="tab" data-tab="experience" onclick="showTab('experience')">EXPERIENCE</a>
-        <a role="tab" class="tab tab-active" data-tab="education" onclick="showTab('education')">EDUCATION</a>
-        <a role="tab" class="tab" data-tab="skills" onclick="showTab('skills')">SKILLS</a>
+    <!-- three tabs -->
+    <div class="container mx-auto px-4 md:px-24 lg:px-60">
+        <div role="tablist" class="tabs tabs-boxed">
+            <a role="tab" class="tab" data-tab="experience" onclick="showTab('experience')">EXPERIENCE</a>
+            <a role="tab" class="tab tab-active" data-tab="education" onclick="showTab('education')">EDUCATION</a>
+            <a role="tab" class="tab" data-tab="skills" onclick="showTab('skills')">SKILLS</a>
+        </div>
     </div>
 
     <!-- EXPERIENCE Section -->
-    <div id="experience" class="content-section marginclass" style="display: none;">
+    <div id="experience" class="content-section marginclass px-4 md:px-24 lg:px-60" style="display: none;">
         <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
             <li>
                 <div class="timeline-middle">
@@ -105,8 +105,8 @@
                     <time class="font-mono italic">Jan 2025 - Present</time>
                     <div class="text-lg font-black">Video Editor</div>
                     <div class="text-sm font-black">Internet Spark</div>
-                    Strong understanding of <br> 
-                    storytelling, pacing, and transitions <br> 
+                    Strong understanding of <br>
+                    storytelling, pacing, and transitions <br>
                     for engaging video content.
                 </div>
                 <hr />
@@ -134,7 +134,7 @@
     </div>
 
     <!-- EDUCATION Section -->
-    <div id="education" class="content-section marginclass" style="display: block;">
+    <div id="education" class="content-section marginclass px-4 md:px-24 lg:px-60" style="display: block;">
         <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
             <li>
                 <div class="timeline-middle">
@@ -148,9 +148,9 @@
                     <time class="font-mono italic">2021 - 2024</time>
                     <div class="text-lg font-black">BACHELOR'S in COMPUTER APPLICATION</div>
                     <div class="text-sm font-black">GUJARAT UNIVERSITY</div>
-                    During this timeline, <br> 
+                    During this timeline, <br>
                     I developed strong interest in video editing and content creation, <br>
-                    sparking my creative journey.  <br>
+                    sparking my creative journey. <br>
                     <b>MARKS: CGPA - 8.1</b>
                 </div>
                 <hr />
@@ -177,7 +177,7 @@
     </div>
 
     <!-- SKILLS Section -->
-    <div id="skills" class="content-section marginclass" style="display: none;">
+    <div id="skills" class="content-section marginclass px-4 md:px-24 lg:px-60" style="display: none;">
         <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
             <li>
                 <div class="timeline-middle">
@@ -189,7 +189,8 @@
                 </div>
                 <div class="timeline-start mb-10 md:text-end">
                     <div class="text-lg font-black">Audio Editing</div>
-                    Enhancing sound quality with seamless mixing, <br> noise reduction, and perfectly synced audio for a cinematic experience.
+                    Enhancing sound quality with seamless mixing, <br> noise reduction, and perfectly synced audio for a
+                    cinematic experience.
                 </div>
                 <hr />
             </li>
@@ -204,7 +205,8 @@
                 </div>
                 <div class="timeline-end md:mb-10">
                     <div class="text-lg font-black">Color Correction & Grading</div>
-                    Bringing visuals to life with <br> balanced colors, mood-enhancing tones, and professional-grade grading techniques.
+                    Bringing visuals to life with <br> balanced colors, mood-enhancing tones, and professional-grade
+                    grading techniques.
                 </div>
                 <hr />
             </li>
@@ -219,7 +221,8 @@
                 </div>
                 <div class="timeline-start mb-10 md:text-end">
                     <div class="text-lg font-black">Transitions & Effects</div>
-                    Creating smooth, dynamic transitions and <br> engaging effects that keep viewers hooked from start to finish.
+                    Creating smooth, dynamic transitions and <br> engaging effects that keep viewers hooked from start
+                    to finish.
                 </div>
                 <hr />
             </li>
@@ -234,7 +237,8 @@
                 </div>
                 <div class="timeline-end md:mb-10">
                     <div class="text-lg font-black">Storytelling</div>
-                    Crafting compelling narratives through <br> well-paced editing, ensuring every frame adds meaning to the story.
+                    Crafting compelling narratives through <br> well-paced editing, ensuring every frame adds meaning to
+                    the story.
                 </div>
                 <hr />
             </li>
@@ -249,7 +253,8 @@
                 </div>
                 <div class="timeline-start mb-10 md:text-end">
                     <div class="text-lg font-black">Creativity</div>
-                    Bringing unique and innovative ideas <br> to every project, making videos visually appealing and impactful.
+                    Bringing unique and innovative ideas <br> to every project, making videos visually appealing and
+                    impactful.
                 </div>
                 <hr />
             </li>
@@ -264,12 +269,12 @@
                 </div>
                 <div class="timeline-end md:mb-10">
                     <div class="text-lg font-black">Keyframing</div>
-                    Animating motion, text, and effects with precision <br> for smooth, professional, and engaging video sequences.
+                    Animating motion, text, and effects with precision <br>
+                    for smooth, professional, and engaging video sequences.
                 </div>
                 <hr />
             </li>
-
-             <!--<li>
+            <li>
                 <hr />
                 <div class="timeline-middle">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
@@ -278,14 +283,36 @@
                             clip-rule="evenodd" />
                     </svg>
                 </div>
-                <div class="timeline-end md:mb-10">
-                    <div class="text-lg font-black">Editing Software Proficiency</div>
-                    Master industry-standard software like Adobe Premiere Pro, Final Cut Pro, or DaVinci Resolve
+                <div class="timeline-start mb-10 md:text-end">
+                    <div class="text-lg font-black">Copywriting</div>
+                    Writing impactful and persuasive content that <br>
+                    captivates audiences and compels them to take action.
                 </div>
                 <hr />
-            </li>-->
-
+            </li>
         </ul>
-    </div>    
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Apply the saved theme from localStorage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+                document.querySelector(`input[value="${savedTheme}"]`).checked = true;
+            }
+
+            // Handle theme change
+            document.querySelectorAll('.theme-controller').forEach(radio => {
+                radio.addEventListener('change', function () {
+                    const selectedTheme = this.value;
+                    document.documentElement.setAttribute('data-theme', selectedTheme);
+                    localStorage.setItem('theme', selectedTheme);
+                    document.getElementById('theme-details').removeAttribute('open');
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
