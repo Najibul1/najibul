@@ -16,6 +16,7 @@
 
 <body>
 
+  <!-- Navigation Bar -->
     <header class="text-gray-600 body-font">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
             <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
@@ -23,8 +24,6 @@
                 <a class="mr-5 hover:text-gray-900" href="resume.html">RESUME</a>
                 <a class="mr-5 hover:text-gray-900" href="project.html">PROJECT</a>
                 <a class="mr-5 hover:text-gray-900" href="contact.html">CONTACT</a>
-
-
                 <div class="flex-none">
                     <ul class="menu menu-horizontal px-1">
                         <li>
@@ -57,28 +56,76 @@
                         </li>
                     </ul>
                 </div>
-
             </nav>
         </div>
     </header>
 
 
+    <!-- contact form -->
+    <section class="text-gray-600 body-font relative">
+      <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Let's Collaborate</h1>
+              <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                  Have a project in mind? Let's collaborate and bring your vision to life!
+              </p>
+          </div>
+          <div class="lg:w-1/2 md:w-2/3 mx-auto">
+              <form id="contactForm" action="https://formspree.io/f/xoqbepoj" method="POST" onsubmit="return validateForm()">
+                  <div class="flex flex-wrap -m-2">
+                      <div class="p-2 w-1/2">
+                          <div class="relative">
+                              <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                              <input type="text" id="name" name="name" placeholder="Hellloo Peter 🕷"
+                                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                              <p class="text-red-500 text-xs mt-1 hidden" id="nameError">Name is required.</p>
+                          </div>
+                      </div>
+                      <div class="p-2 w-1/2">
+                          <div class="relative">
+                              <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                              <input type="email" id="email" name="email" placeholder="We'll never spam you!"
+                                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                              <p class="text-red-500 text-xs mt-1 hidden" id="emailError">Enter a valid email.</p>
+                          </div>
+                      </div>
+  
+                      <div class="p-2 w-full">
+                          <div class="relative">
+                              <label for="phone" class="leading-7 text-sm text-gray-600">Phone (optional)</label>
+                              <input type="text" id="phone" name="phone" placeholder="+1 234 567 8901 (WhatsApp & Calls)"
+                                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                              <p class="text-red-500 text-xs mt-1 hidden" id="phoneError">Enter a valid phone number (e.g., +91 9876543210).</p>
+                          </div>
+                      </div>
+  
+                      <div class="p-2 w-full">
+                          <div class="relative">
+                              <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                              <textarea id="message" name="message" placeholder="Tell us about your project, idea, or collaboration plan!"
+                                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                              <p class="text-red-500 text-xs mt-1 hidden" id="messageError">Message cannot be empty.</p>
+                          </div>
+                      </div>
+                      <div class="p-2 w-full">
+                          <button type="submit"
+                              class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                              Connect
+                          </button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </section>
 
-
-
-    <!-- footer -->
+   <!-- footer -->
     <footer class="text-gray-600 body-font">
         <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span class="ml-3 text-xl">Tailblocks</span>
-          </a>
-          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Tailblocks —
-            <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@knyttneve</a>
+          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">Copyright © 2025 - All rights reserved by
+            <a href="index.html" class="text-gray-600 ml-1" rel="noopener noreferrer">Najibul Mallick</a>
           </p>
-          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <!-- <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             <a class="text-gray-500">
               <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -101,10 +148,58 @@
                 <circle cx="4" cy="4" r="2" stroke="none"></circle>
               </svg>
             </a>
-          </span>
+          </span> -->
         </div>
       </footer>
-
+  
+  <script>
+      function validateForm() {
+          let isValid = true;
+  
+          // Name validation
+          let name = document.getElementById("name").value.trim();
+          let nameError = document.getElementById("nameError");
+          if (name === "") {
+              nameError.classList.remove("hidden");
+              isValid = false;
+          } else {
+              nameError.classList.add("hidden");
+          }
+  
+          // Email validation
+          let email = document.getElementById("email").value.trim();
+          let emailError = document.getElementById("emailError");
+          let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(email)) {
+              emailError.classList.remove("hidden");
+              isValid = false;
+          } else {
+              emailError.classList.add("hidden");
+          }
+  
+          // Phone validation (optional, supports international numbers)
+          let phone = document.getElementById("phone").value.trim();
+          let phoneError = document.getElementById("phoneError");
+          let phonePattern = /^(\+?\d{1,4}[\s-]?)?(\(?\d{2,4}\)?[\s-]?)?\d{6,}$/;
+          if (phone !== "" && !phonePattern.test(phone)) {
+              phoneError.classList.remove("hidden");
+              isValid = false;
+          } else {
+              phoneError.classList.add("hidden");
+          }
+  
+          // Message validation
+          let message = document.getElementById("message").value.trim();
+          let messageError = document.getElementById("messageError");
+          if (message === "") {
+              messageError.classList.remove("hidden");
+              isValid = false;
+          } else {
+              messageError.classList.add("hidden");
+          }
+  
+          return isValid;
+      }
+  </script>
 </body>
-
 </html>
