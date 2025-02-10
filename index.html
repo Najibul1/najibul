@@ -11,6 +11,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 </head>
@@ -24,37 +27,11 @@
                 <a class="mr-5 hover:text-gray-900" href="resume.html">RESUME</a>
                 <a class="mr-5 hover:text-gray-900" href="project.html">PROJECT</a>
                 <a class="mr-5 hover:text-gray-900" href="contact.html">CONTACT</a>
-                <div class="flex-none">
-                    <ul class="menu menu-horizontal px-1">
-                        <li>
-                            <details id="theme-details">
-                                <summary>THEME</summary>
-                                <ul tabindex="0"
-                                    class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl">
-                                    <li>
-                                        <input type="radio" name="theme-dropdown"
-                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                            aria-label="Default" value="default" />
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="theme-dropdown"
-                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                            aria-label="Retro" value="retro" />
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="theme-dropdown"
-                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                            aria-label="Valentine" value="valentine" />
-                                    </li>
-                                </ul>
-                            </details>
-                        </li>
-                    </ul>
-                </div>
             </nav>
         </div>
     </header>
 
+    <!--Profile Card-->
     <section class="text-gray-600 body-font">
         <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col-reverse items-center justify-between">
             <!-- Card Div (Left) -->
@@ -65,8 +42,8 @@
                         NAJIBUL MALLICK <br>
                         Video Editor
                     </div>
-                     <div class="card-socials">
-                     <!--   <button class="card-socials-btn instagram">
+                    <div class="card-socials">
+                        <!--   <button class="card-socials-btn instagram">
                             <a href="https://www.instagram.com/t.me_98" target="_blank">
                                 <svg viewBox="0 0 24 24" height="33" width="33" xmlns="http://www.w3.org/2000/svg">
                                     <path fill="currentColor"
@@ -82,7 +59,7 @@
                                 </svg>
                             </a>
                         </button>-->
-                    </div> 
+                    </div>
                 </div>
             </div>
 
@@ -111,26 +88,5 @@
             </div>
         </div>
     </section>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Apply the saved theme from localStorage
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.documentElement.setAttribute('data-theme', savedTheme);
-                document.querySelector(`input[value="${savedTheme}"]`).checked = true;
-            }
-
-            // Handle theme change
-            document.querySelectorAll('.theme-controller').forEach(radio => {
-                radio.addEventListener('change', function () {
-                    const selectedTheme = this.value;
-                    document.documentElement.setAttribute('data-theme', selectedTheme);
-                    localStorage.setItem('theme', selectedTheme);
-                    document.getElementById('theme-details').removeAttribute('open');
-                });
-            });
-        });
-    </script>
 </body>
 </html>
