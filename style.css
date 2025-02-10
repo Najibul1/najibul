@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #d7d1f3;
+  min-height: 100vh;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: "Parkinsans", serif;
+}
+
+
 .card {
   --font-color: #323232;
   --font-color-sub: #666;
