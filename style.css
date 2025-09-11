@@ -296,5 +296,22 @@ html, body {
   }
 }
 
+/* fonts */
+.mango-heading {
+    font-family: 'Oswald', sans-serif;
+}
 
+.glacial-heading {
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
+/* montserrat font  */
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/* poppins font */
+.font-poppins {
+    font-family: 'Poppins', sans-serif !important;
+}
 
