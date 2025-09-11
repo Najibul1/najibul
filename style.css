@@ -221,7 +221,7 @@ html, body {
 /* Client Logo Section */
 .client-logos {
     overflow: hidden;
-    background: #fff;
+    background: #d7d1f3;;
     /* adjust to match site background */
     padding: 20px 0;
     white-space: nowrap;
@@ -295,5 +295,6 @@ html, body {
     padding: 5px;
   }
 }
+
 
 
